@@ -25,6 +25,7 @@ def login():
                 if gif.user_id == sender.id:
                     gif.user_id = receiver.id
                     gif.save()
+                    gifs = list(Gif.select().dicts())
                     return render_template('index.html', page='user', transaction='ok', gif_sent=gif, user=sender, gifs=gifs, users=users, receiver_gif=receiver), 201
                 else:
                     return render_template('index.html', page='user', transaction='not_owner', user=sender, gifs=gifs, users=users), 201
