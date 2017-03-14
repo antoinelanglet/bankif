@@ -1,0 +1,23 @@
+{
+  "name": "bankif",
+  "version": "0.1.0",
+  "description": "A bank for your gifs to be secured",
+  "main": "index.js",
+  "dependencies": {
+    "hapi": "^16.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoinelanglet/bankif.git"
+  },
+  "author": "Antoine Langlet & Florian Mopin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoinelanglet/bankif/issues"
+  },
+  "homepage": "https://github.com/antoinelanglet/bankif#readme"
+}
