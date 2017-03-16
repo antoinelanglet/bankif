@@ -1,27 +1,35 @@
 {
-  "name": "bankif",
-  "version": "0.1.0",
-  "description": "A bank for your gifs to be secured",
+  "name": "hapi-restful-api-example",
+  "version": "1.0.2",
+  "description": "An example of a restful api built using hapi.js",
   "main": "index.js",
-  "dependencies": {
-    "good": "^7.1.0",
-    "good-console": "^6.4.0",
-    "good-squeeze": "^5.0.1",
-    "hapi": "^16.1.0",
-    "inert": "^4.1.0"
-  },
-  "devDependencies": {},
+  "keywords": [
+    "hapi",
+    "hapijs",
+    "api",
+    "restful",
+    "example"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test ./node_modules/.bin/lab --assert should"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antoinelanglet/bankif.git"
+    "url": "https://github.com/rcorral/hapi-restful-api-example.git"
   },
-  "author": "Antoine Langlet & Florian Mopin",
-  "license": "ISC",
+  "author": "Rafael Corral",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/antoinelanglet/bankif/issues"
+    "url": "https://github.com/rcorral/hapi-restful-api-example/issues"
   },
-  "homepage": "https://github.com/antoinelanglet/bankif#readme"
+  "homepage": "https://github.com/rcorral/hapi-restful-api-example",
+  "dependencies": {
+    "boom": "^2.6.0",
+    "hapi": "~8.0.0",
+    "joi": "^5.0.1"
+  },
+  "devDependencies": {
+    "lab": "^5.0.2",
+    "should": "^4.3.0"
+  }
 }
