@@ -1,26 +1,17 @@
 'use strict';
 
+// Assign hapi.js module to a Hapi variable
 const Hapi = require('hapi');
 const Good = require('good');
 
+// Creates a server instance
 const server = new Hapi.Server();
 server.connection({ port: 3000, host: 'localhost' });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-        reply('Hello, world!');
-    }
-});
-
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: function (request, reply) {
-        reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
-    }
-});
+// Dynamically adds all the routes to the server instance. The routes are stored in the src/routes folder
+for (var route in routes) {
+    server.route(routes[route]);
+}
 
 server.register({
     register: Good,
@@ -44,6 +35,7 @@ server.register({
         throw err; // something bad happened loading the plugin
     }
 
+// Starts the hapi.js server
     server.start((err) => {
 
         if (err) {
